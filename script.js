@@ -88,3 +88,19 @@ function playRound(humanChoice, compChoice){
         }
     }
 }
+
+function playGame(){
+    for(let i = 0; i < 5; i++){
+        playRound(getHumanChoice(), getComputerChoice());
+        alert("human score: " + humanScore + "  vs  computer score:" + compScore);
+    }
+    if(compScore > humanScore){
+        console.log("you lose");
+    }
+    else if(compScore < humanScore){
+        console.log("you win");
+    }
+    else{
+        console.log("it's a tie");
+    }
+}

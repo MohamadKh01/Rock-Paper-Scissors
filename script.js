@@ -1,5 +1,8 @@
 let compChoice;
 let humanChoice;
+let humanScore = 0;
+let compScore = 0;
+
 
 const Rock = 0;
 const Paper = 1;
@@ -41,4 +44,6 @@ function getHumanChoice(){
             break;
     }
 
+    return humanChoice;
 }
+

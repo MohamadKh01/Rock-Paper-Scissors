@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    background-color: burlywood;
+}
+
+header {
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.choices {
+    margin: 3% 10%;
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.choice {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-width: 0;
+    max-width:300px;
+}
+
+.board {
+    margin: 1% 10%;
+    display: flex;
+    justify-content: center;
+    gap: 30%;
+}
+
+.score{
+    font-size: 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.result {
+    font-size: 48px;
+    margin: 70px 10%;
+    display: flex;
+    justify-content: center;
+}

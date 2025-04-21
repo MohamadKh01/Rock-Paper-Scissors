@@ -49,6 +49,7 @@ function getHumanChoice(){
 }
 */
 
+/* //play round in the console
 function playRound(humanChoice, compChoice){
     if(compChoice == Rock){
         if(humanChoice == Rock){
@@ -90,6 +91,53 @@ function playRound(humanChoice, compChoice){
         }
     }
 }
+*/
+
+//play round on user interface
+function playRound(humanChoice, compChoice){
+    if(compChoice == Rock){
+        if(humanChoice == Rock){
+            document.getElementById("resultDiv").innerHTML = "Result: " + "it's a tie!! play again!";
+        }
+        else if(humanChoice == Paper){
+            document.getElementById("resultDiv").innerHTML = "Result: " + "You win! Paper beats rock!";
+            humanScore++;
+        }
+        else if(humanChoice == Scissors){
+            document.getElementById("resultDiv").innerHTML = "Result: " + "You lose! Rock beats Scissors!";
+            compScore++;
+        }
+    }
+    else if(compChoice == Paper){
+        if(humanChoice == Rock){
+            document.getElementById("resultDiv").innerHTML = "Result: " + "You lose! Paper beats Rock!";
+            compScore++;
+        }
+        else if(humanChoice == Paper){
+            document.getElementById("resultDiv").innerHTML = "Result: " + "it's a tie!! play again!";
+        }
+        else if(humanChoice == Scissors){
+            document.getElementById("resultDiv").innerHTML = "Result: " + "You win! scissors beat Paper!";
+            humanScore++;
+        }
+    }
+    else if(compChoice == Scissors){
+        if(humanChoice == Rock){
+            document.getElementById("resultDiv").innerHTML = "Result: " + "You win! Rock beats Scissors!";
+            humanScore++;
+        }
+        else if(humanChoice == Paper){
+            document.getElementById("resultDiv").innerHTML = "Result: " + "You lose! Scissors beat Paper!";
+            compScore++;
+        }
+        else if(humanChoice == Scissors){
+            document.getElementById("resultDiv").innerHTML = "Result: " + "It's a tie!! play again!";
+        }
+    }
+    document.getElementById("humanScore").innerHTML = humanScore;
+    document.getElementById("compScore").innerHTML = compScore;
+}
+
 
 /* loop the gane for 5 rounds then declare the winner
 function playGame(){
@@ -113,4 +161,8 @@ function newGame(){
     humanScore = 0;
     compScore = 0;
     round = 0;
+
+    document.getElementById("humanScore").innerHTML = humanScore;
+    document.getElementById("compScore").innerHTML = compScore;
+    document.getElementById("resultDiv").innerHTML = "Result:"
 }

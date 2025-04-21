@@ -15,9 +15,9 @@
     </header>
     <main>
         <div class="choices">
-            <img class="choice" src="./media/rock.png" alt="rock" onclick="humanChoice = Rock; alert(humanChoice)">
-            <img class="choice" src="./media/paper.png" alt="paper" onclick="humanChoice = Paper; alert(humanChoice)">
-            <img class="choice" src="./media/scissors.png" alt="scissors" onclick="humanChoice = Scissors; alert(humanChoice)">
+            <img class="choice" src="./media/rock.png" alt="rock" onclick="humanChoice = Rock; playRound(humanChoice, getComputerChoice())">
+            <img class="choice" src="./media/paper.png" alt="paper" onclick="humanChoice = Paper; playRound(humanChoice, getComputerChoice())">
+            <img class="choice" src="./media/scissors.png" alt="scissors" onclick="humanChoice = Scissors; playRound(humanChoice, getComputerChoice())">
         </div>
         <div class="board">
             <div class="score">
@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class="result">
-            <div>Result:</div>
+            <div id="resultDiv">Result:</div>
             <button class="newGame" onclick="newGame()">New Game</button>
         </div>
     </main>

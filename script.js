@@ -2,7 +2,7 @@ let compChoice;
 let humanChoice;
 let humanScore = 0;
 let compScore = 0;
-
+let round = 0;
 
 const Rock = 0;
 const Paper = 1;
@@ -25,6 +25,7 @@ function getComputerChoice() {
     return compChoice;
 }
 
+/* //get human choice by prompt
 function getHumanChoice(){
     let str = prompt("Rock? Paper? Scissors?");
     str = str.toLowerCase();
@@ -46,6 +47,7 @@ function getHumanChoice(){
 
     return humanChoice;
 }
+*/
 
 function playRound(humanChoice, compChoice){
     if(compChoice == Rock){
@@ -89,6 +91,7 @@ function playRound(humanChoice, compChoice){
     }
 }
 
+/* loop the gane for 5 rounds then declare the winner
 function playGame(){
     for(let i = 0; i < 5; i++){
         playRound(getHumanChoice(), getComputerChoice());
@@ -103,4 +106,11 @@ function playGame(){
     else{
         console.log("it's a tie");
     }
+}
+*/
+
+function newGame(){
+    humanScore = 0;
+    compScore = 0;
+    round = 0;
 }

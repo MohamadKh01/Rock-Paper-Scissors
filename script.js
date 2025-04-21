@@ -98,40 +98,49 @@ function playRound(humanChoice, compChoice){
     if(compChoice == Rock){
         if(humanChoice == Rock){
             document.getElementById("resultDiv").innerHTML = "Result: " + "it's a tie!! play again!";
+            document.getElementById("resultDiv").style.backgroundColor = "rgb(239, 209, 212)";
         }
         else if(humanChoice == Paper){
             document.getElementById("resultDiv").innerHTML = "Result: " + "You win! Paper beats rock!";
             humanScore++;
+            document.getElementById("resultDiv").style.backgroundColor = "rgb(33, 177, 33)";
         }
         else if(humanChoice == Scissors){
             document.getElementById("resultDiv").innerHTML = "Result: " + "You lose! Rock beats Scissors!";
             compScore++;
+            document.getElementById("resultDiv").style.backgroundColor = "rgb(253, 48, 48)";
         }
     }
     else if(compChoice == Paper){
         if(humanChoice == Rock){
             document.getElementById("resultDiv").innerHTML = "Result: " + "You lose! Paper beats Rock!";
             compScore++;
+            document.getElementById("resultDiv").style.backgroundColor = "rgb(253, 48, 48)";
         }
         else if(humanChoice == Paper){
             document.getElementById("resultDiv").innerHTML = "Result: " + "it's a tie!! play again!";
+            document.getElementById("resultDiv").style.backgroundColor = "rgb(239, 209, 212)";
         }
         else if(humanChoice == Scissors){
             document.getElementById("resultDiv").innerHTML = "Result: " + "You win! scissors beat Paper!";
             humanScore++;
+            document.getElementById("resultDiv").style.backgroundColor = "rgb(33, 177, 33)";
         }
     }
     else if(compChoice == Scissors){
         if(humanChoice == Rock){
             document.getElementById("resultDiv").innerHTML = "Result: " + "You win! Rock beats Scissors!";
             humanScore++;
+            document.getElementById("resultDiv").style.backgroundColor = "rgb(33, 177, 33)";
         }
         else if(humanChoice == Paper){
             document.getElementById("resultDiv").innerHTML = "Result: " + "You lose! Scissors beat Paper!";
             compScore++;
+            document.getElementById("resultDiv").style.backgroundColor = "rgb(253, 48, 48)";
         }
         else if(humanChoice == Scissors){
             document.getElementById("resultDiv").innerHTML = "Result: " + "It's a tie!! play again!";
+            document.getElementById("resultDiv").style.backgroundColor = "rgb(239, 209, 212)";
         }
     }
     document.getElementById("humanScore").innerHTML = humanScore;
@@ -164,5 +173,6 @@ function newGame(){
 
     document.getElementById("humanScore").innerHTML = humanScore;
     document.getElementById("compScore").innerHTML = compScore;
-    document.getElementById("resultDiv").innerHTML = "Result:"
+    document.getElementById("resultDiv").innerHTML = "Result:";
+    document.getElementById("resultDiv").style.backgroundColor = "transparent";
 }

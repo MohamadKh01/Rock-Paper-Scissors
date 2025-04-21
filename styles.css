@@ -12,6 +12,7 @@ header {
 main {
     display: flex;
     flex-direction: column;
+    font-size: 4vw;
 }
 
 .choices {
@@ -27,6 +28,12 @@ main {
     flex-shrink: 1;
     min-width: 0;
     max-width:300px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+}
+
+.choice:hover {
+    border: 3px solid black;
 }
 
 .board {
@@ -37,7 +44,6 @@ main {
 }
 
 .score{
-    font-size: 48px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -45,8 +51,8 @@ main {
 }
 
 .result {
-    font-size: 48px;
     margin: 30px 10%;
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,8 +60,14 @@ main {
     gap: 20px;
 }
 
+#resultDiv{
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
 .newGame {
     background-color: chocolate;
     font-size: 24px;
     border-radius: 10px;
+    padding: 10px;
 }
